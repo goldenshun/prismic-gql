@@ -1,5 +1,5 @@
-# Represents the namespace for the current user
-type Section {
-  body: [JSONObject]
-  dataVisualizations: [JSONObject]
+type Section @cacheControl(maxAge: 240) {
+  id: ID!
+  uid: ID!
+  data: JSONObject
 }
