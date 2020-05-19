@@ -25,7 +25,7 @@ class NextApp extends App {
     return (
       <>
         <Head>
-          <script async defer src="//static.cdn.prismic.io/prismic.js?repo=networks-web&new=true" />
+          <script async defer src="//static.cdn.prismic.io/prismic.js?repo=sean-prismic-demo&new=true" />
         </Head>
         <ApolloProvider client={apollo}>
           <Component {...pageProps} {...other} />
