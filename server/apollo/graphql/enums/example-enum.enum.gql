@@ -1,0 +1,4 @@
+enum ExampleEnum {
+  FOO
+  BAR
+}

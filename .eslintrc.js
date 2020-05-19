@@ -9,6 +9,7 @@ module.exports = {
       ignoreTemplateLiterals: true,
     }], // Best Practices group decided to alter this
     'no-underscore-dangle': 'off', // Some keys returned from GraphQL may have dangling underscores
+    'import/prefer-default-export': 'off',
     'react/jsx-filename-extension': 'off',
     'react/no-danger': 'off', // The term dangerouslySetInnerHTML should be enough warning
     'react/react-in-jsx-scope': 'off',

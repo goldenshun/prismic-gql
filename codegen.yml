@@ -1,0 +1,6 @@
+schema: ./server/apollo/graphql/**/*.gql
+overwrite: true
+generates:
+  ./server/apollo/codegen/introspection.json:
+    plugins:
+      - introspection

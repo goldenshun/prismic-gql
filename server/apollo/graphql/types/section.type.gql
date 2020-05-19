@@ -1,0 +1,5 @@
+# Represents the namespace for the current user
+type Section {
+  body: [JSONObject]
+  dataVisualizations: [JSONObject]
+}
