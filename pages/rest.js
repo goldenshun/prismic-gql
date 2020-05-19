@@ -13,7 +13,9 @@ const RestPage = () => {
 
   return (
     <div>
-      This is where the rest demo will go.
+      <p>Filter by documents/search in the Networks tab.</p>
+      <p>Sample response times range between 140ms - 380ms</p>
+      <p>Also note the x-cache: Miss from cloudfront response header</p>
     </div>
   );
 };
