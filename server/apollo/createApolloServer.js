@@ -13,7 +13,5 @@ export const createApolloServer = () => new ApolloServer({
   plugins: [responseCachePlugin()],
   debug: process.env.NODE_ENV !== 'production',
   playground: false,
-  tracing: true,
-  cacheControl: true,
-  introspection: true,
+  introspection: process.env.NODE_ENV !== 'production',
 });

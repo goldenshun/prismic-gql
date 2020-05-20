@@ -11,8 +11,11 @@ const GET_SECTION = gql`
 `;
 
 const GraphQLPage = () => {
-  const { data } = useQuery(GET_SECTION);
+  const { data, error } = useQuery(GET_SECTION);
   console.log({ data });
+  if (error) {
+    console.error(error);
+  }
 
   return (
     <div>
