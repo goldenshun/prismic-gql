@@ -1,3 +1,3 @@
-extend type Query {
-  section(uid: ID!): Section!
+extend type Prismic {
+  section(uid: ID!): Section! @cacheControl(maxAge: 240)
 }

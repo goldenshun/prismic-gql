@@ -1,5 +1,5 @@
 export const resolverMap = {
-  Query: {
+  Prismic: {
     section(_, args, { dataSources }) {
       return dataSources.prismicRest.getSection(args);
     },

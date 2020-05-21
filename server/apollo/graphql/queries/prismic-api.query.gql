@@ -1,0 +1,7 @@
+type PrismicApi {
+  masterRef: String!
+}
+
+extend type Query {
+  prismicApi: PrismicApi!
+}
