@@ -1,12 +1,16 @@
 /* eslint-disable class-methods-use-this */
+import { DataSource } from 'apollo-datasource';
 import { getApi } from '../../../lib/prismic';
 
-export class PrismicRestDataSource {
+export class PrismicRestDataSource extends DataSource {
+  async initialize() {
+    // This gets the latest API version once per request
+    this.api = await getApi();
+  }
+
   async getSection(args) {
-    console.time('PrismicRestDataSource getSection');
+    console.log('PrismicRestDataSource getSection');
     const api = await getApi();
-    const section = await api.getByUID('section', args.uid);
-    console.timeLog('PrismicRestDataSource getSection');
-    return section;
+    return api.getByUID('section', args.uid);
   }
 }

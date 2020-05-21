@@ -2,7 +2,7 @@ import _get from 'lodash/get';
 import { RichText } from 'prismic-reactjs';
 import useLocalPrismicQuery from '../lib/apollo-client/useLocalPrismicQuery';
 
-const GET_SECTION = `
+const GET_SECTION_FRAGMENT = `
   section(uid: "test-section") {
     id
     data
@@ -10,7 +10,7 @@ const GET_SECTION = `
 `;
 
 const LocalGraphQLPage = () => {
-  const { data, error } = useLocalPrismicQuery(GET_SECTION);
+  const { data, error } = useLocalPrismicQuery(GET_SECTION_FRAGMENT);
   if (error) {
     console.error(error);
   }
